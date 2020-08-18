@@ -25,12 +25,13 @@ const threadLoader = {
 
 const alias = {
   '@components': path.resolve(__dirname, './src/components'),
-  '@tools': path.resolve(__dirname, './src/tools'),
-  '@configs': path.resolve(__dirname, './src/configs'),
+  '@hooks': path.resolve(__dirname, './src/hooks'),
+  '@contexts': path.resolve(__dirname, './src/contexts'),
   '@pages': path.resolve(__dirname, './src/pages'),
-  '@assets': path.resolve(__dirname, './src/assets'),
-  '@utils': path.resolve(__dirname, './src/utils'),
-  '@constants': path.resolve(__dirname, './src/constants')
+  '@environments': path.resolve(__dirname, './src/environments'),
+  '@helper': path.resolve(__dirname, './src/helper'),
+  '@layouts': path.resolve(__dirname, './src/layouts'),
+  '@pages': path.resolve(__dirname, './src/pages')
 }
 
 const postcssLoader = {
@@ -58,7 +59,7 @@ const pluginsOfProc = [
   new AutoDllPlugin({
     inject: true,
     filename: '[hash].dll.js',
-    debug:true,
+    debug: true,
     path: `${staticPath}/dll`,
     // entry: {
     //   vendor: [
@@ -72,7 +73,7 @@ const pluginsOfProc = [
         minChunkSize: 512
       })
     ]
-  }),
+  })
 ]
 
 module.exports = {
@@ -184,7 +185,7 @@ module.exports = {
                     camel2DashComponentName: false
                   },
                   'react-use'
-                ],
+                ]
               ]
             }
           },
@@ -225,7 +226,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public/index.html'),
       inject: true
-    }),
+    })
   ],
   optimization: {
     moduleIds: 'hashed',
@@ -241,15 +242,15 @@ module.exports = {
       },
       ...(isDev
         ? {
-          minSize: 10000,
-          maxAsyncRequests: Infinity,
-          maxInitialRequests: Infinity
-        }
+            minSize: 10000,
+            maxAsyncRequests: Infinity,
+            maxInitialRequests: Infinity
+          }
         : {
-          minSize: 30000,
-          maxAsyncRequests: 5,
-          maxInitialRequests: 3
-        })
+            minSize: 30000,
+            maxAsyncRequests: 5,
+            maxInitialRequests: 3
+          })
     },
     ...(isDev && {
       usedExports: true
@@ -274,9 +275,9 @@ module.exports = {
   },
   devServer: {
     compress: true,
-    contentBase: path.resolve(__dirname, "dist"),
+    contentBase: path.resolve(__dirname, 'dist'),
     historyApiFallback: {
-      disableDotRule: true,
+      disableDotRule: true
     },
     index: 'public/index',
     hot: true,
@@ -291,13 +292,13 @@ module.exports = {
       chunks: true,
       chunkModules: false,
       modules: false,
-      children: true,
+      children: true
     },
     watchContentBase: true,
     watchOptions: {
       ignored: /node_modules/,
-      poll: true,
+      poll: true
     },
-    writeToDisk: true,
-  },
+    writeToDisk: true
+  }
 }

@@ -5,23 +5,14 @@
     "baseUrl": ".",
     "paths": {
       "@components": ["./src/components/index"],
-      "@configs": ["./src/configs/index"],
+      "@contexts": ["./src/contexts/index"],
       "@pages": ["./src/pages/index"],
-      "@tools": ["./src/tools/index"],
-      "@utils": ["./src/utils/index"],
-      "@assets": ["./src/assets/index"],
-      "@components/*": ["./src/components/*"],
-      "@configs/*": ["./src/configs/*"],
-      "@pages/*": ["./src/pages/*"],
-      "@tools/*": ["./src/tools/*"],
-      "@utils/*": ["./src/utils/*"],
-      "@assets/*": ["./src/assets/*"]
+      "@hooks": ["./src/hooks/index"],
+      "@helper": ["./src/helper/index"],
+      "@environments": ["./src/environments/index"],
+      "@layouts": ["./src/layouts/index"]
     }
   },
-  "exclude": [
-    "node_modules", "config", "public"
-  ],
-  "include": [
-    "src", "../superReport"
-  ]
+  "exclude": ["node_modules", "config", "public"],
+  "include": ["src", "../superReport"]
 }

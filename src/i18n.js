@@ -1,10 +1,13 @@
-const i18nResources = {
+import i18n from 'i18next'
+import { initReactI18next } from 'react-i18next'
+
+const resources = {
   vi: {
     translation: {
       common: {
         language: {
           vietnamese: 'Tiếng Việt',
-          english: 'Tiếng Anh',
+          english: 'Tiếng Anh'
         },
         menu: {
           analytics: 'Tổng hợp',
@@ -29,7 +32,7 @@ const i18nResources = {
       common: {
         language: {
           vietnamese: 'Vietnamese',
-          english: 'English',
+          english: 'English'
         },
         menu: {
           analytics: 'Analytics',
@@ -51,4 +54,13 @@ const i18nResources = {
   }
 }
 
-export { i18nResources }
+i18n.use(initReactI18next).init({
+  resources,
+  lng: 'vi',
+  fallbackLng: 'vi',
+  interpolation: {
+    escapeValue: false
+  }
+})
+
+export default i18n

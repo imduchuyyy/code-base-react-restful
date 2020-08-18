@@ -3,11 +3,11 @@
     [
       "import",
       {
-        "libraryName": "@digihcs/innos-ui3",
+        "libraryName": "@antd",
         "libraryDirectory": "es",
         "style": true
       },
-      "@digihcs/innos-ui3"
+      "@antd"
     ]
   ]
 }
