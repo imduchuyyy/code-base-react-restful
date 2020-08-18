@@ -5,3 +5,4 @@ package-lock.lock
 .env.development.local
 .env.production.local
 .env
+.vscode
