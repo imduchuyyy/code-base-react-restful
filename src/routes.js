@@ -36,10 +36,4 @@ export const routes = [
       }
     ]
   },
-  {
-    label: 'NoMatch',
-    path: '*',
-    component: 'NoMatch',
-    status: 'notfound'
-  }
 ]
