@@ -15,6 +15,7 @@ function AuthValue() {
 
   const login = useCallback(async (username, password) => {
     //handle login
+    setIsAuth(true)
   })
 
   const register = useCallback(async () => {
