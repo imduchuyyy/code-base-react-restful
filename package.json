@@ -78,7 +78,6 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
-    "cypress": "^5.2.0",
     "i18next": "^19.3.4",
     "react": "^16.13.1",
     "react-cookie": "^4.0.3",
