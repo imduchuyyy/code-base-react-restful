@@ -1,6 +1,6 @@
 /node_modules
 yarn.lock
-package-lock.lock
+package-lock.json
 /dist
 .env.development.local
 .env.production.local
