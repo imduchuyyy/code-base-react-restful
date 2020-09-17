@@ -5,10 +5,7 @@
     "jest": true,
     "es6": true
   },
-  "extends": [
-    "eslint:recommended",
-    "airbnb"
-  ],
+  "extends": ["eslint:recommended", "airbnb"],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
@@ -21,10 +18,7 @@
     "ecmaVersion": 10,
     "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "react-hooks"
-  ],
+  "plugins": ["react", "react-hooks"],
   "rules": {
     "semi": [
       2,
@@ -80,6 +74,7 @@
     "template-curly-spacing": "off",
     "indent": "off",
     "react-hooks/rules-of-hooks": "error",
-    "consistent-return": "off"
+    "consistent-return": "off",
+    "linebreak-style": 0
   }
 }

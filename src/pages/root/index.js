@@ -1,6 +1,7 @@
 import React from 'react'
 
-function Root(props) {
+function Root() {
+  console.log(React)
   return 'app'
 }
 

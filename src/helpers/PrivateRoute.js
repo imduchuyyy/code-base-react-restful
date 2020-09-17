@@ -9,11 +9,11 @@ export function PrivateRoute({ children, ...rest }) {
   return isAuth ? (
     <Route {...rest}>{children}</Route>
   ) : (
-      <Redirect
-        to={{
+    <Redirect
+      to={{
           pathname: '/login',
           state: { from: location }
         }}
-      />
+    />
     )
 }

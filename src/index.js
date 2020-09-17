@@ -1,11 +1,11 @@
 import React, { Suspense } from 'react'
 import { render } from 'react-dom'
-import App from './App'
 import { CookiesProvider } from 'react-cookie'
 import { BrowserRouter } from 'react-router-dom'
 import '@translations'
 import { I18nProvider, AuthProvider, SocketProvider } from '@contexts'
 import { Loading } from '@components'
+import App from './App'
 
 const rootElement = document.getElementById('root')
 render(
@@ -16,7 +16,7 @@ render(
           <AuthProvider>
             <Suspense fallback={<Loading />}>
               <BrowserRouter>
-                <App></App>
+                <App />
               </BrowserRouter>
             </Suspense>
           </AuthProvider>

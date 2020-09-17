@@ -6,7 +6,7 @@ import { routes } from './routes'
 
 function App() {
   return (
-    < Switch >
+    <Switch>
       {
         routes && routes.map((route, i) => {
           const LazyComponent = lazy(() => {
@@ -38,7 +38,7 @@ function App() {
           }
         })
       }
-    </Switch >
+    </Switch>
   )
 }
 

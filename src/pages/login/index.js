@@ -1,10 +1,10 @@
 import React from 'react'
 import { useAuth } from '@contexts'
 
-function Login(props) {
+function Login() {
   const { login } = useAuth()
   return (
-    <button onClick={() => login()}>login</button>
+    <button type="submit" onClick={() => login()}>login</button>
   )
 }
 

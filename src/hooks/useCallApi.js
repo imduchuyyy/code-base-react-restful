@@ -1,13 +1,13 @@
-import React, { useCallback } from 'react'
+import { useCallback } from 'react'
 import axios from 'axios'
 import { TOKEN_NAME } from '@environments'
 
-const StatusEnum = {
-  SUCCESS: 'SUCCESS',
-  ERROR: 'ERROR',
-  WARNING: 'WARING',
-  INFO: 'INFO'
-}
+// const StatusEnum = {
+//   SUCCESS: 'SUCCESS',
+//   ERROR: 'ERROR',
+//   WARNING: 'WARING',
+//   INFO: 'INFO'
+// }
 
 export function useCallApi(url) {
   const token = localStorage.getItem(TOKEN_NAME)

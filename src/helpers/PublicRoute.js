@@ -14,6 +14,6 @@ export function PublicRoute({ children, ...rest }) {
       }}
     />
   ) : (
-      <Route {...rest}>{children}</Route>
+    <Route {...rest}>{children}</Route>
     )
 }

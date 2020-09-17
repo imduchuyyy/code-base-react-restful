@@ -14,12 +14,13 @@ function AuthValue() {
   const [isAuth, setIsAuth] = useState(!!localStorage.getItem(TOKEN_NAME))
 
   const login = useCallback(async (username, password) => {
-    //handle login
+    // handle login
+    console.log(username, password)
     setIsAuth(true)
   })
 
   const register = useCallback(async () => {
-    //handle register
+    // handle register
   })
 
   const logout = useCallback(() => {
@@ -27,7 +28,7 @@ function AuthValue() {
     setIsAuth(false)
   })
 
-  useEffect(() => {}, [])
+  useEffect(() => { }, [])
   return {
     isAuth,
     login,

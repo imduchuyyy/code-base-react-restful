@@ -1,6 +1,7 @@
 import React from 'react'
 
-function Register(props) {
+function Register() {
+  console.log(React)
   return 'Register'
 }
 
