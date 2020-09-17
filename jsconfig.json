@@ -8,9 +8,10 @@
       "@contexts": ["./src/contexts/index"],
       "@pages": ["./src/pages/index"],
       "@hooks": ["./src/hooks/index"],
-      "@helper": ["./src/helper/index"],
+      "@helpers": ["src/helpers/index"],
       "@environments": ["./src/environments/index"],
-      "@layouts": ["./src/layouts/index"]
+      "@layouts": ["./src/layouts/index"],
+      "@assets": ["./src/assets"]
     }
   },
   "exclude": ["node_modules", "config", "public"],

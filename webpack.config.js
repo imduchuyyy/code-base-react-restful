@@ -12,7 +12,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
 const WebpackBar = require('webpackbar')
 const Dotenv = require('dotenv-webpack')
 
-const isDev = true
+const isDev = !!!process.env.NODE_ENV
 const staticPath = 'static'
 
 const threadLoader = {
@@ -25,11 +25,12 @@ const threadLoader = {
 
 const alias = {
   '@components': path.resolve(__dirname, './src/components'),
+  '@translations': path.resolve(__dirname, './src/translations'),
   '@hooks': path.resolve(__dirname, './src/hooks'),
   '@contexts': path.resolve(__dirname, './src/contexts'),
   '@pages': path.resolve(__dirname, './src/pages'),
   '@environments': path.resolve(__dirname, './src/environments'),
-  '@helper': path.resolve(__dirname, './src/helper'),
+  '@helpers': path.resolve(__dirname, './src/helpers'),
   '@layouts': path.resolve(__dirname, './src/layouts'),
   '@pages': path.resolve(__dirname, './src/pages')
 }
@@ -242,15 +243,15 @@ module.exports = {
       },
       ...(isDev
         ? {
-            minSize: 10000,
-            maxAsyncRequests: Infinity,
-            maxInitialRequests: Infinity
-          }
+          minSize: 10000,
+          maxAsyncRequests: Infinity,
+          maxInitialRequests: Infinity
+        }
         : {
-            minSize: 30000,
-            maxAsyncRequests: 5,
-            maxInitialRequests: 3
-          })
+          minSize: 30000,
+          maxAsyncRequests: 5,
+          maxInitialRequests: 3
+        })
     },
     ...(isDev && {
       usedExports: true

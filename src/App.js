@@ -1,6 +1,6 @@
 import React, { lazy } from 'react'
 import { hot } from 'react-hot-loader'
-import { PrivateRoute, PublicRoute } from '@helper'
+import { PrivateRoute, PublicRoute } from '@helpers'
 import { Switch, Route } from 'react-router-dom'
 import { routes } from './routes'
 

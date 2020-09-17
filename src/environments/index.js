@@ -1,4 +1,4 @@
 const TOKEN_NAME = process.env.TOKEN_NAME || 'access-token'
-const URL = process.env.URL || 'localhost:4000'
+const API = process.env.API || 'localhost:4000'
 
-export { TOKEN_NAME, URL }
+export { TOKEN_NAME, API }
