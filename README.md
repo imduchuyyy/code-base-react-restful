@@ -24,10 +24,13 @@
 
 ```javascript
 import { ... } from '@components'
-import { ... } from '@configs'
+import { ... } from '@contexts'
+import { ... } from '@environments'
+import { ... } from '@helpers'
+import { ... } from '@hooks'
+import { ... } from '@layouts'
 import { ... } from '@pages'
-import { ... } from '@tools'
-import { ... } from '@utils'
+import { ... } from '@translation'
 ```
 
 3. Support Dynamic Import
